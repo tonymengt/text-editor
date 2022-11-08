@@ -192,6 +192,11 @@ h1 {
   background-color: #31a9e1;
 }
 
+#logo {
+  width: 79px;
+  height: 79px;
+}
+
 @media only screen and (max-width: 600px) {
   .nav-btn {
     display: none;
