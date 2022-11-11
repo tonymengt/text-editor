@@ -27,6 +27,8 @@ module.exports = () => {
         swDest: 'src-sw.js'
       }),
       new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
         name: 'Just Another Text Editor',
         short_name: 'JATE',
         description: 'Keep track of texts.',
@@ -61,7 +63,7 @@ module.exports = () => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
-              plugins: ['@babel/plugin-transform-runtime','@babel/plugin-proposal-object-rest-spread']
+              plugins: ["@babel/plugin-proposal-object-rest-spread", "@babel/transform-runtime"]
             },
           },
         },

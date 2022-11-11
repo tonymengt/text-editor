@@ -28,10 +28,13 @@ registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching
 const matchCallback = ({request}) =>
-
+{
+  return (
   request.destination === 'style' ||
   request.destination === 'script' ||
-  request.destination === 'worker';
+  request.destination === 'worker'
+  )
+}
 
 registerRoute(
   matchCallback,
